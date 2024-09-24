@@ -17,9 +17,14 @@ public class UsuarioDaoImp implements UsuarioDao{
 	@PersistenceContext
 	private EntityManager entityManager;
 	@Override
-	public List<Usuario> obtenerUsuarios(){
+	public List<Usuario> getUsuarios(){
 		String query="from Usuario";
 		List<Usuario> resultado= entityManager.createQuery(query).getResultList();
 		return resultado;
+	}
+	@Override
+	public void eliminar(Long id) {
+		Usuario usuario=entityManager.find(Usuario.class, id);
+		entityManager.remove(usuario);
 	}
 }

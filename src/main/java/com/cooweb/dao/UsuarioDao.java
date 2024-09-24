@@ -6,5 +6,8 @@ import com.cooweb.models.Usuario;
 
 @Transactional
 public interface UsuarioDao {
-	List<Usuario> obtenerUsuarios();
+	List<Usuario> getUsuarios();
+
+	void eliminar(Long id);
+	
 }
