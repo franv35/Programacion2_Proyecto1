@@ -4,6 +4,7 @@ $(document).ready(function() {
   
 });
 
+
 async function registrarUsuario(){
 	//creamos una variable de tipo array que contenga los datos
 	let datos={};
@@ -31,8 +32,9 @@ async function registrarUsuario(){
     },
     body:JSON.stringify(datos)
   });
-  
+  window.location.href="login.html"
   //const usuarios = await request.json();
   
-  //let listadoHTML='';
+  alert("Usuario Registrado con exito");
+  window.location.href="login.html";
 }

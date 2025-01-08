@@ -10,6 +10,9 @@ import java.util.List;
 import com.cooweb.dao.UsuarioDao;
 import com.cooweb.models.Usuario;
 
+import de.mkammerer.argon2.Argon2;
+import de.mkammerer.argon2.Argon2Factory;
+
 @RestController
 public class UsuarioController {
 	@Autowired
@@ -27,6 +30,13 @@ public class UsuarioController {
 	}
 	@RequestMapping(value="api/usuarios", method=RequestMethod.POST)
 	public void registrarUsuario(@RequestBody Usuario usuario){
+		Argon2 argon2;
+		argon2=Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2d);
+		
+		String pass_hasheado=argon2.hash(1, 1024, 1, usuario.getPassword());
+		usuario.setPassword(pass_hasheado);
 		usuarioDao.registrar(usuario);
 	}
+	
+	
 }
