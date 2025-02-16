@@ -33,7 +33,6 @@ public class TurnosDaoImp implements TurnosDAO{
 	@Override
 	public void solicitarTurno(Turnos turno) {
 		entityManager.merge(turno);
-		
 	}
 
 

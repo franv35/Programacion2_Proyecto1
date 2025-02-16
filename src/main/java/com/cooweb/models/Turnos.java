@@ -30,8 +30,8 @@ public class Turnos {
 	@Column(name="profesional")
 	private String profesional;
 	
-	@Column(name="fecha")
-    private Date fecha;
+	@Column(name="dia")
+    private Date dia;
 	
 	@Column(name="hora")
     private Time hora;
@@ -42,13 +42,13 @@ public class Turnos {
 	public Turnos() {
 	}
 	
-	public Turnos(Long id_turnos, String nombreUsuario, String especialidad, String profesional, Date fecha, Time hora,
+	public Turnos(Long id_turnos, String nombreUsuario, String especialidad, String profesional, Date dia, Time hora,
 			Usuario usuario) {
 		super();
 		this.id_turnos = id_turnos;
 		this.especialidad = especialidad;
 		this.profesional = profesional;
-		this.fecha = fecha;
+		this.dia = dia;
 		this.hora = hora;
 	}
 
@@ -79,12 +79,12 @@ public class Turnos {
 		this.profesional = profesional;
 	}
 
-	public Date getFecha() {
-		return fecha;
+	public Date getDia() {
+		return dia;
 	}
 
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
+	public void setDia(Date dia) {
+		this.dia = dia;
 	}
 
 	public Time getHora() {

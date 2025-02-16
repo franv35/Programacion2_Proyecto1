@@ -38,7 +38,7 @@
                             </div>
 							        <form action="" class="formTurno">
 										<div class="form-group row">
-											<select id="especialidad" class="form-group" class="solicitarDrop" name="especialidad" onchange="setEspecialidad()">
+											<select id="especialidad" class="form-group" class="solicitarDrop" name="especialidad">
 												<option value="" disabled selected>Especialidad</option>
 												<option value="Medico Clinico">Médico Clínico</option>
 												<option value="Pediatria">Pediatría</option>
@@ -53,35 +53,33 @@
 												<option value="Odontologia">Odontología</option>
 												<option value="Oftalmologia">Oftalmología</option>
 											</select>
-											<select id="profesional" class="form-group" class="solicitarDrop" name="profesional" onchange="setProfesional()">
+											<select id="profesional" class="form-group" class="solicitarDrop" name="profesional">
 												<option value="" disabled selected>Profesional</option>
 												<option value="Dr. Ramirez">Dr. Ramirez</option>
 												<option value="Dra. Sánchez">Dra. Sánchez</option>
 												<option value="Dr. Pérez">Dr. Pérez</option>
 												<option value="Dra. Flarinni">Dra. Flarinni</option>
 											</select>
-											<select id="fecha" class="form-group" class="solicitarDrop" name="dia" onchange="setDia()">
-												<option value="" disabled selected>Elegir Día</option>
-												<option value="'2025-02-17'">17/02/2025</option>
-												<option value="'2025-02-18'">18/02/2025</option>
-												<option value="'2025-02-19'">19/02/2025</option>
-												<option value="'2025-02-20'">20/02/2025</option>
-												<option value="'2025-02-21'">21/02/2025</option>
-												<option value="'2025-02-22'">22/02/2025</oClínicoption>
+											<select id="dia" class="form-group" class="solicitarDrop" name="dia">
+												<option disabled selected>Elegir Día</option>
+												<option value="2025-02-17">17/02/2025</option>
+												<option value="2025-02-18">18/02/2025</option>
+												<option value="2025-02-19">19/02/2025</option>
+												<option value="2025-02-20">20/02/2025</option>
+												<option value="2025-02-21">21/02/2025</option>
+												<option value="2025-02-22">22/02/2025</option>
 											</select>
-											<select id="hora" class="form-group" class="solicitarDrop" name="dia" onchange="setHorario()">
+											<select id="hora" class="form-group" class="solicitarDrop" name="hora">
 												<option value="" disabled selected>Elegir Horario</option>
 												<option value="8:00:00">8:00</option>
 												<option value="9:00:00">9:00</option>
 												<option value="10:00:00">10:00</option>
 												<option value="11:00:00">11:00</option>
 												<option value="12:00:00">12:00</option>
-												<option value="13:00:00">13:00</oClínicoption>
+												<option value="13:00:00">13:00</option>
 											</select>                        
 										</div>
-							            
-									<a onclick="solicitarTurno()" href="#" class="btn btn-primary btn-user btn-block">Confirmar
-									</a>
+									<a href="#"onclick="solicitarTurno()" href="#" class="btn btn-primary btn-user btn-block">Confirmar</a>
 							     </form>
                             <hr>
                             <div class="text-center">
